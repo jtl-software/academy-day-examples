@@ -43,4 +43,4 @@ Die App liest `GET /sales-invoices`, `GET /sales-invoices/{id}/line-items` und `
 
 ## Projektverlauf
 
-Die bisherigen Nutzer-Prompts zu diesem Projekt stehen in [PROMPT_HISTORY.md](./PROMPT_HISTORY.md). Zugangsdaten sind darin nicht enthalten.
+Die bisherigen Nutzer-Prompts und kurze, nicht sensible Antwortzusammenfassungen stehen in [PROMPT_HISTORY.md](./PROMPT_HISTORY.md). Zugangsdaten sind darin nicht enthalten.
