@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "technicalName": "profit-pulse-dashboard",
+  "lifecycle": {
+    "configurationUrl": "http://localhost:55050/setup"
+  },
+  "authentication": {
+    "serviceAccount": {
+      "clientCredentials": true,
+      "description": "Liest Verkaufsrechnungen und Artikellieferanten für die Rohertragsanalyse"
+    }
+  },
+  "capabilities": {
+    "erp": {
+      "api": {
+        "scopes": ["salesinvoices.read", "invoices.read", "items.read"]
+      },
+      "menuItems": [
+        {
+          "id": "profit-pulse-dashboard",
+          "name": "Profit Pulse",
+          "url": "http://localhost:55050/erp"
+        }
+      ]
+    }
+  }
+}

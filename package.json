@@ -1,0 +1,22 @@
+{
+  "name": "jtl-profit-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/bridge.js --bundle --format=esm --platform=browser --outfile=public/bridge.js",
+    "prestart": "npm run build",
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "predev": "npm run build",
+    "dev": "node --env-file-if-exists=.env --watch server.mjs",
+    "test": "node --test",
+    "register": "npx -y @jtl-software/create-cloud-app@latest register"
+  },
+  "dependencies": {
+    "@jtl-software/cloud-apps-auth": "^0.6.0",
+    "@jtl-software/cloud-apps-core": "^3.71.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profit Pulse · JTL Analytics</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="Profit Pulse Startseite"><span class="brand-mark">↗</span><span>profit<span class="brand-light">pulse</span><small>JTL ANALYTICS</small></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav aria-label="Hauptnavigation">
+        <a class="nav-link active" href="#dashboard"><span>▦</span> Übersicht</a>
+        <a class="nav-link" href="#breakdown"><span>≋</span> Profit-Analyse</a>
+      </nav>
+      <div class="side-bottom"><div class="avatar">JP</div><div><strong>JTL Dashboard</strong><small>Profit Intelligence</small></div><span class="dots">···</span></div>
+    </aside>
+    <main id="dashboard">
+      <header class="topbar"><div class="breadcrumbs">Analytics <span>/</span> <strong>Profit-Übersicht</strong></div><div class="top-actions"><span class="live-dot"></span><span id="source-label">Daten werden geladen</span><span class="divider"></span><span class="top-icon" title="Analyse">◫</span></div></header>
+      <div class="content">
+        <div class="heading-row"><div><div class="eyebrow">FINANZÜBERSICHT <span class="eyebrow-line"></span> <span id="current-year">–</span></div><h1>Profit im Überblick<span class="heading-dot">.</span></h1><p>Verstehe, wo dein Umsatz entsteht und was davon übrig bleibt.</p></div><button id="export" class="button ghost"><span>↧</span> CSV exportieren</button></div>
+        <section class="filterbar" aria-label="Filter"><div class="filter-caption"><span class="filter-icon">⌑</span> Zeitraum</div><select id="period" aria-label="Zeitraum"><option value="year">Gesamtes Jahr</option><option value="quarter">Letztes Quartal</option><option value="month">Letzter Monat</option><option value="all">Alle Daten</option></select><div class="filter-separator"></div><div class="filter-caption">Ansicht</div><div class="segmented" role="group" aria-label="Gruppierung"><button data-group="supplier" class="selected">Lieferanten</button><button data-group="customer">Kunden</button><button data-group="address">Lieferadressen</button></div><div class="filter-spacer"></div><button id="refresh" class="refresh" title="Daten aktualisieren" aria-label="Daten aktualisieren">↻</button></section>
+        <div id="error" class="error" hidden></div>
+        <section class="cards" aria-label="Kennzahlen"><div class="metric-card"><div class="metric-head"><span>Gesamtumsatz</span><span class="metric-icon blue">↗</span></div><div class="metric-value" id="revenue">–</div><div class="metric-foot"><span class="badge neutral">100 %</span><span>der ausgewählten Umsätze</span></div></div><div class="metric-card"><div class="metric-head"><span>Einkaufskosten</span><span class="metric-icon orange">◧</span></div><div class="metric-value" id="cost">–</div><div class="metric-foot"><span class="badge orange" id="cost-ratio">–</span><span>vom Gesamtumsatz</span></div></div><div class="metric-card highlight"><div class="metric-head"><span>Rohertrag</span><span class="metric-icon green">✦</span></div><div class="metric-value" id="profit">–</div><div class="metric-foot"><span class="badge green" id="profit-ratio">–</span><span>vom Gesamtumsatz</span></div></div><div class="metric-card"><div class="metric-head"><span>Rohertragsmarge</span><span class="metric-icon violet">◎</span></div><div class="metric-value" id="margin">–</div><div class="metric-foot"><span class="badge neutral" id="row-count">–</span><span>Rechnungspositionen</span></div></div></section>
+        <section class="panels"><article class="panel chart-panel"><div class="panel-heading"><div><div class="panel-kicker">ENTWICKLUNG</div><h2>Umsatz & Rohertrag</h2></div><div class="legend"><span><i class="legend-dot revenue"></i>Umsatz</span><span><i class="legend-dot profit"></i>Rohertrag</span></div></div><div id="chart" class="chart" role="img" aria-label="Monatliche Entwicklung von Umsatz und Rohertrag"></div></article><article class="panel split-panel"><div class="panel-heading"><div><div class="panel-kicker">UMSATZVERTEILUNG</div><h2>Woher kommt der Umsatz?</h2></div></div><div id="donut" class="donut-wrap"></div><div id="donut-legend" class="donut-legend"></div></article></section>
+        <section class="panel breakdown" id="breakdown"><div class="panel-heading breakdown-heading"><div><div class="panel-kicker">DETAILANALYSE</div><h2 id="breakdown-title">Profit nach Lieferanten</h2><p>Umsatzanteil und Rohertrag auf einen Blick.</p></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Suchen..." aria-label="Einträge suchen"></label></div><div class="table-wrap"><table><thead><tr><th id="name-heading">LIEFERANT</th><th>UMSATZ</th><th>UMSATZANTEIL</th><th>ROHERTRAG</th><th>MARGE</th></tr></thead><tbody id="breakdown-body"></tbody></table></div><div class="table-footer"><span id="table-count">–</span><span>Basis: Nettoverkaufspreis − Nettoeinkaufspreis × Menge</span></div></section>
+        <footer class="page-footer"><span>Profit Pulse · JTL Analytics</span><span>Rohertrag vor Versand-, Zahlungs- und Gemeinkosten</span></footer>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
