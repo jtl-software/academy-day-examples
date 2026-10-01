@@ -1,0 +1,8 @@
+{
+  "JtlPlatform": {
+    "ClientId": "YOUR_CLIENT_ID",
+    "ClientSecret": "YOUR_CLIENT_SECRET",
+    "Issuer": "https://id.jtl-cloud.com",
+    "AppId": "YOUR_APP_ID"
+  }
+}

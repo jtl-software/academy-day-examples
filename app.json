@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "technicalName": "kundenrisiko",
+  "lifecycle": {
+    "configurationUrl": "http://localhost:4310/setup"
+  },
+  "capabilities": {
+    "hub": {
+      "appLauncher": {
+        "redirectUrl": "http://localhost:4310/hub"
+      }
+    },
+    "erp": {
+      "menuItems": [
+        {
+          "id": "kundenrisiko-menu",
+          "name": "Kundenrisiko",
+          "url": "http://localhost:4310/erp"
+        }
+      ],
+      "api": {
+        "scopes": ["customers.read", "salesorders.read", "items.read"]
+      },
+      "pane": [
+        {
+          "id": "kundenrisiko-customer-panel",
+          "context": "customers",
+          "matchChildContext": true,
+          "title": "Kundenrisiko",
+          "url": "http://localhost:4310/pane",
+          "requiredScopes": ["customers.read", "salesorders.read"]
+        }
+      ]
+    }
+  },
+  "authentication": {
+    "publicClient": {
+      "redirectUris": ["http://localhost:4310/callback"],
+      "postLogoutRedirectUris": ["http://localhost:4310/"]
+    },
+    "serviceAccount": {
+      "clientCredentials": true,
+      "description": "Liest Kunden, Bestellungen und Retouren fuer die Retouren-Risikobewertung."
+    }
+  }
+}

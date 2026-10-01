@@ -1,0 +1,12 @@
+{
+  "name": "kundenrisiko-backend",
+  "version": "0.2.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "postinstall": "node -e \"var p='Kundenrisiko.Api';require('fs').existsSync(p)&&require('child_process').execSync('dotnet restore '+p,{stdio:'inherit'})\"",
+    "dev": "dotnet run --project Kundenrisiko.Api",
+    "build": "dotnet build Kundenrisiko.Api"
+  }
+}
