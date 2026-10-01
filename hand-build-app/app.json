@@ -1,0 +1,73 @@
+{
+  "version": "1.0.0",
+  "technicalName": "hand-build-app-f4bffe",
+  "lifecycle": {
+    "configurationUrl": "http://localhost:4004/setup"
+  },
+  "capabilities": {
+    "hub": {
+      "appLauncher": {
+        "redirectUrl": "http://localhost:4004/hub"
+      }
+    },
+    "erp": {
+      "menuItems": [
+        {
+          "id": "hand-build-app-menu",
+          "name": "hand-build-app",
+          "url": "http://localhost:4004/erp"
+        },
+        {
+          "id": "hand-build-app-graphql-demo",
+          "name": "GraphQL Demo (Client-Server)",
+          "url": "http://localhost:4004/graphql-demo"
+        },
+        {
+          "id": "hand-build-app-graphql-serverless",
+          "name": "GraphQL Demo (Serverless)",
+          "url": "http://localhost:4004/graphql-serverless"
+        }
+      ],
+      "api": {
+        "scopes": [
+          "items.read",
+          "salesorders.read",
+          "customers.read",
+          "taxes.read"
+        ]
+      },
+      "pane": [
+        {
+          "id": "hand-build-app-customer-panel",
+          "context": "customers",
+          "matchChildContext": true,
+          "title": "hand-build-app",
+          "url": "http://localhost:4004/pane",
+          "requiredScopes": []
+        },
+        {
+          "id": "hand-build-app-events-panel",
+          "context": "customers",
+          "matchChildContext": true,
+          "title": "hand-build-app Events",
+          "url": "http://localhost:4004/panel-events",
+          "requiredScopes": []
+        }
+      ]
+    }
+  },
+  "authentication": {
+    "publicClient": {
+      "redirectUris": [
+        "http://localhost:4004/callback"
+      ],
+      "postLogoutRedirectUris": [
+        "http://localhost:4004/"
+      ]
+    },
+    "serviceAccount": {
+      "clientCredentials": true,
+      "description": "hand-build-app backend service account"
+    }
+  }
+}
