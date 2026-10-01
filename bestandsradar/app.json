@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "technicalName": "bestandsradar-e354dd",
+  "lifecycle": {
+    "configurationUrl": "http://localhost:3004/setup"
+  },
+  "capabilities": {
+    "hub": {
+      "appLauncher": {
+        "redirectUrl": "http://localhost:3004/hub"
+      }
+    },
+    "erp": {
+      "menuItems": [
+        {
+          "id": "bestandsradar-menu",
+          "name": "Bestandsradar",
+          "url": "http://localhost:3004/erp"
+        }
+      ],
+      "api": {
+        "scopes": [
+          "items.read",
+          "salesorders.read"
+        ]
+      }
+    }
+  },
+  "authentication": {
+    "publicClient": {
+      "redirectUris": [
+        "http://localhost:3004/callback"
+      ],
+      "postLogoutRedirectUris": [
+        "http://localhost:3004/"
+      ]
+    },
+    "serviceAccount": {
+      "clientCredentials": true,
+      "description": "bestandsradar backend service account"
+    }
+  }
+}
