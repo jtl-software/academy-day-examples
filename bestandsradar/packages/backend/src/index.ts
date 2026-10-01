@@ -11,7 +11,7 @@ import { createGql, loadItems, loadSales } from './erp.js';
 const packageRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 dotenv.config({ path: path.join(packageRoot, '.env') });
 const app = express();
-const PORT = Number(process.env.PORT) || 3005;
+const PORT = Number(process.env.PORT) || 3025;
 
 const REQUIRED_ENV_VARS = ['CLIENT_ID', 'CLIENT_SECRET'] as const;
 

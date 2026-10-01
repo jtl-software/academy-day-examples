@@ -13,7 +13,8 @@ export default defineConfig(({ mode }) => {
   const backendUrl = loadEnv(mode, process.cwd(), "").VITE_BACKEND_URL;
   return {
     server: {
-      port: 3004,
+      port: 3024,
+      strictPort: true,
       // Vite delegates to the OS opener (`open`/`start`/`xdg-open`), which
       // reuses an existing tab on the dev URL when the browser supports it
       // (Chrome, Safari, Edge) instead of opening a new one.

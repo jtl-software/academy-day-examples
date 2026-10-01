@@ -39,10 +39,10 @@ public client:
 - `VITE_JTL_ISSUER` — the identity provider, e.g. `https://id.dev.jtl-cloud.com`
 
 Until they are set, the standalone pages explain what is missing. The redirect URI is
-`http://localhost:3004/callback` and must be one the manifest registered.
+`http://localhost:3024/callback` and must be one the manifest registered.
 
 ## Scripts
 
-- `npm run dev` — Vite dev server on port 3004
+- `npm run dev` — Vite dev server on port 3024
 - `npm run build` — production build
 - `npm run test` — Vitest

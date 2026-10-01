@@ -6,10 +6,10 @@ JTL Cloud App. Zeigt, welche Artikel gefragt sind, und berechnet aus der Verkauf
 
 ```bash
 npm install
-npm run dev     # Frontend http://localhost:3004, Backend http://localhost:3005
+npm run dev     # Frontend http://localhost:3024, Backend http://localhost:3025
 ```
 
-`http://localhost:3004/demo` zeigt das Dashboard mit Demodaten, ohne ERP und ohne Login.
+`http://localhost:3024/demo` zeigt das Dashboard mit Demodaten, ohne ERP und ohne Login.
 
 ## Berechnung
 
