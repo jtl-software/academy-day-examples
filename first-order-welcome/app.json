@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "technicalName": "first-order-welcome-04539c",
+  "lifecycle": {
+    "configurationUrl": "http://localhost:3014/setup"
+  },
+  "capabilities": {
+    "hub": {
+      "appLauncher": {
+        "redirectUrl": "http://localhost:3014/hub"
+      }
+    },
+    "erp": {
+      "menuItems": [
+        {
+          "id": "first-order-welcome-menu",
+          "name": "first-order-welcome",
+          "url": "http://localhost:3014/erp"
+        }
+      ],
+      "api": {
+        "scopes": [
+          "salesorders.read"
+        ]
+      },
+      "pane": [
+        {
+          "id": "first-order-welcome-panel",
+          "context": "salesorders",
+          "title": "Erstbestellung",
+          "url": "http://localhost:3014/first-order",
+          "requiredScopes": [
+            "salesorders.read"
+          ]
+        }
+      ]
+    }
+  },
+  "authentication": {
+    "publicClient": {
+      "redirectUris": [
+        "http://localhost:3014/callback"
+      ],
+      "postLogoutRedirectUris": [
+        "http://localhost:3014/"
+      ]
+    },
+    "serviceAccount": {
+      "clientCredentials": true,
+      "description": "first-order-welcome backend service account"
+    }
+  }
+}
