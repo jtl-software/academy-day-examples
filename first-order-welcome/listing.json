@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "defaultLocale": "de-DE",
+  "distributionType": "PRIVATE",
+  "name": {
+    "de-DE": {
+      "short": "first-order-welcome",
+      "full": "first-order-welcome"
+    }
+  },
+  "description": {
+    "de-DE": {
+      "short": "Zeigt in der Bestellübersicht, ob eine Bestellung die erste eines Kunden ist, und hilft bei der Willkommensmail",
+      "full": "Zeigt in der Bestellübersicht, ob eine Bestellung die erste eines Kunden ist, und hilft bei der Willkommensmail"
+    }
+  },
+  "benefits": {
+    "de-DE": ["Benefit 1", "Benefit 2", "Benefit 3"]
+  },
+  "category": {
+    "main": "articles-product-data",
+    "sub": []
+  },
+  "media": {
+    "icons": {
+      "light": "https://hub.jtl-cloud.com/assets/image-placeholder.png",
+      "dark": "https://hub.jtl-cloud.com/assets/image-placeholder.png"
+    },
+    "screenshots": []
+  },
+  "compatibility": {
+    "products": {
+      "de-DE": ["jtl-wawi"]
+    },
+    "productsNotes": "",
+    "minVersions": {
+      "jtl-wawi": "1.0.0"
+    }
+  },
+  "pricing": {
+    "subscriptionTiers": [
+      {
+        "id": "plan-free",
+        "content": {
+          "de-DE": {
+            "name": "Free",
+            "description": "For getting started.",
+            "features": ["Feature 1"]
+          }
+        },
+        "isFree": true,
+        "isMostPopular": false
+      }
+    ]
+  },
+  "support": {
+    "url": {
+      "de-DE": "https://example.com/support-for-app-xy"
+    },
+    "documentation": {
+      "de-DE": "https://example.com/guide-for-app-xy"
+    }
+  },
+  "legal": {
+    "privacyPolicy": "https://example.com/privacy",
+    "termsOfUse": "https://example.com/terms-of-use",
+    "gdpr": {
+      "request": "https://example.com/gdpr/request",
+      "delete": "https://example.com/gdpr/delete"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+@import '@jtl-software/platform-ui-react/dist/main.css';
+@import 'tailwindcss';
+@source '../../../node_modules/@jtl-software/platform-ui-react/dist';
+@source '../../../node_modules/@jtl-software/cloud-apps-auth/dist';
