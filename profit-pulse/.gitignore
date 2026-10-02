@@ -1,0 +1,5 @@
+.env
+.context/
+node_modules/
+public/bridge.js
+.data/
