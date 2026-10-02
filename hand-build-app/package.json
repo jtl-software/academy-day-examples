@@ -1,0 +1,28 @@
+{
+  "name": "hand-build-app",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "register": "npx -y @jtl-software/create-cloud-app@latest register",
+    "listing": "npx -y @jtl-software/create-cloud-app@latest listing"
+  },
+  "packageManager": "npm@10.8.2",
+  "devDependencies": {
+    "turbo": "^2.5.5"
+  },
+  "jtlCloudApp": {
+    "backend": "node",
+    "frontend": "react",
+    "legacy": false
+  }
+}
