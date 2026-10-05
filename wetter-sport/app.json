@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "technicalName": "wetter-sport-app-e75bcd",
+  "lifecycle": {
+    "configurationUrl": "http://localhost:3004/setup"
+  },
+  "capabilities": {
+    "hub": {
+      "appLauncher": {
+        "redirectUrl": "http://localhost:3004/hub"
+      }
+    },
+    "erp": {
+      "menuItems": [
+        {
+          "id": "wetter-sport-dashboard",
+          "name": "Wetter & Nachbestellung",
+          "url": "http://localhost:3004/weather-dashboard"
+        }
+      ],
+      "api": {
+        "scopes": [
+          "items.read",
+          "salesorders.read"
+        ]
+      },
+      "pane": [
+        {
+          "id": "wetter-sport-item-pane",
+          "context": "items",
+          "matchChildContext": true,
+          "title": "Verkäufe & Wetter",
+          "url": "http://localhost:3004/item-weather",
+          "requiredScopes": [
+            "items.read",
+            "salesorders.read"
+          ]
+        }
+      ]
+    }
+  },
+  "authentication": {
+    "publicClient": {
+      "redirectUris": [
+        "http://localhost:3004/callback"
+      ],
+      "postLogoutRedirectUris": [
+        "http://localhost:3004/"
+      ]
+    },
+    "serviceAccount": {
+      "clientCredentials": true,
+      "description": "Liest Artikel, Bestände und Aufträge für die Wetteranalyse"
+    }
+  }
+}
